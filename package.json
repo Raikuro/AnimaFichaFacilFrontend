@@ -9,7 +9,7 @@
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
     "prettier": "pretty-quick --staged",
-    "pre-commit": "run-s prettier lint test",
+    "pre-commit": "run-s prettier lint",
     "pre-push": "run-s 'build --aot true'"
   },
   "private": true,
@@ -67,8 +67,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm-run-all pre-commit",
-      "pre-push": "npm-run-all pre-push"
+      "pre-commit": "npm-run-all pre-commit"
     }
   }
 }
