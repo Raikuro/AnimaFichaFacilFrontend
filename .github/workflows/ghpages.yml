@@ -1,4 +1,3 @@
-
 name: Deploy to GitHub Pages
 on:
   push:
@@ -8,18 +7,18 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Build
-      run: |
-        npm install
-        npm uninstall husky
-        npm run build:prod
+      - name: Build
+        run: |
+          npm install
+          npm uninstall husky
+          npm run build:ghpages
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
+      - name: Deploy
+    uses: JamesIves/github-pages-deploy-action@releases/v3
+    with:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BRANCH: gh-pages
+      FOLDER: dist

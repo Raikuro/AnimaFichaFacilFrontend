@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
+    "build:ghpages": "ng build --prod --base-href AnimaFichaFacilFrontend",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
