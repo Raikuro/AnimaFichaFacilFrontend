@@ -14,6 +14,7 @@ jobs:
     - name: Build
       run: |
         npm install
+        npm uninstall husky
         npm run build:prod
 
     - name: Deploy
