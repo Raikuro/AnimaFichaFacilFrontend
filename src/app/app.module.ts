@@ -8,9 +8,15 @@ import { MaterialModule } from './material.module'
 import { SidebarComponent } from './views/sidebar/sidebar.component'
 import { NewCharacterComponent } from './views/new-character/new-character.component'
 import { APP_BASE_HREF } from '@angular/common'
+import { MyCharactersComponent } from './views/my-characters/my-characters.component'
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, NewCharacterComponent],
+  declarations: [
+    AppComponent,
+    SidebarComponent,
+    NewCharacterComponent,
+    MyCharactersComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
